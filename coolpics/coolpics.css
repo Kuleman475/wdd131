@@ -52,7 +52,7 @@ button {
     nav {
         text-align: left;
     }
-    ul {
+    ul, ul.active {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         grid-column: auto;
