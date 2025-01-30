@@ -15,36 +15,25 @@ function viewerTemplate(pic, alt) {
       </div>`;
   }
 document.querySelector('.gallery').addEventListener('click', (e) => {
-        // create a variable to hold the element that was clicked on from event.target
-    
-        // get the src attribute from that element and 'split' it on the "-"
-    
-        // construct the new image file name by adding "-full.jpeg" to the first part of the array from the previous step
-    
-        // insert the viewerTemplate into the top of the body element
-        // (element.insertAdjacentHTML("afterbegin", htmltoinsert))
-    
-        // add a listener to the close button (X) that calls a function called closeViewer when clicked
-    
-    if (e.target.tagName === 'IMG') { 
-        const pic = e.target.src;
-        const alt = e.target.alt;
+        
+    let pic = e.target.src;
+    const alt = e.target.alt;
 
-        // // Remove any existing viewer before adding a new one
-        // document.querySelector('.viewer')?.remove();
+    let parts = pic.split("-");
+    let newImg = parts[0] + "-full.jpeg";
+    pic = newImg;
+    console.log(parts);
+    console.log(pic);
 
-        // Add viewer to the body
-        document.body.insertAdjacentHTML("afterbegin", viewerTemplate(pic, alt));
+    document.body.insertAdjacentHTML("afterbegin", viewerTemplate(pic, alt));
 
-        // Close viewer on button click
-        document.querySelector('.close-viewer').addEventListener('click', () => {
-            document.querySelector('.viewer').remove();
-        });
-    }
+    document.querySelector('.close-viewer').addEventListener('click', () => {
+        document.querySelector('.viewer').remove();
+    });
 });
 
 
 document.querySelector('.close-viewer').addEventListener('click', () => {
     console.log("hide");
     document.querySelector(".viewer").remove();
-} )
+});
