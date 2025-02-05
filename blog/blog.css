@@ -32,9 +32,13 @@ main {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     margin: 30px;
+    font-family: 'roboto';
+    font-size: 17px;
+
 }
 .col1 {
-    text-align: right;
+    text-align: center;
+    font-size: 17px;
 }
 .col2 {
     text-align: center;
@@ -45,4 +49,10 @@ main {
 }
 #title {
     color: red;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#description {
+    font-size: 17px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
