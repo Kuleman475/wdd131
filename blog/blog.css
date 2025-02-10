@@ -28,7 +28,7 @@ li {
     color: red;
     font-size: 20px;
 }
-main {
+.article{
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     margin: 30px;
@@ -36,14 +36,14 @@ main {
     font-size: 17px;
 
 }
-.col1 {
+.article .col1 {
     text-align: center;
     font-size: 17px;
 }
-.col2 {
+.article .col2 {
     text-align: center;
 }
-.col3 {
+.article .col3 {
     border-style: solid;
     border-color: orange;
 }
