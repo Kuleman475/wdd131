@@ -37,7 +37,10 @@ li {
 
 }
 .article .col1 {
-    text-align: center;
+    text-align: right;
+    border-right: solid;
+    border-color: lightsalmon;
+    padding-right: 20px;
     font-size: 17px;
 }
 .article .col2 {
