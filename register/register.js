@@ -47,3 +47,19 @@ document.getElementById("add").addEventListener("click", function() {
     form.insertAdjacentHTML("beforebegin", participantTemplate(count));
     console.log(count)
   });
+
+document.querySelector("#submitButton").addEventListener("click", function submitForm(event) {
+  event.preventDefault();
+  let total = 0;
+
+  const fees = document.querySelectorAll(".fee input");
+  console.log(fees.values);
+  // for(let i = 0; i < fees.length; i++){
+  //   total += fees[i];
+  //   console.log(total);
+  // }
+  fees.forEach(fee => {
+    total += Number(fee.value) || 0;
+});
+  console.log(total)
+})
