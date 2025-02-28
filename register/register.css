@@ -160,3 +160,67 @@
     }
   }
   
+
+
+
+
+
+
+
+
+
+  /* Screen flip animation */
+body {
+  transition: transform 2s ease-in-out;
+}
+
+body.flip {
+  transform: rotateY(360deg);
+}
+
+/* Confetti styles */
+.confetti-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.confetti {
+  width: 15px;
+  height: 15px;
+  background-color: hsl(calc(360 * var(--hue)), 100%, 50%);
+  position: absolute;
+  top: 0;
+  border-radius: 50%;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+/* Random confetti colors */
+.confetti:nth-child(odd) {
+  --hue: 0.6;
+}
+
+.confetti:nth-child(even) {
+  --hue: 0.3;
+}
+
+/* Highlight invalid fields */
+.error {
+  border: 2px solid red;
+  background-color: #ffecec;
+}
+
+.success {
+  text-align: center;
+  font-size: xx-large;
+}
