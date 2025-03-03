@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Chewy&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+img {
+	max-width: 100%;
+    
+}
+
+header {
+    display: flex; /* Enables Flexbox */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+  }
+  .logo {
+    height: 50px;
+    margin-right: 10px;
+  }
+.title{
+    text-align: center;
+}
+.searchbar{
+    display: flex;
+    margin: 20px;
+}
+.searchInput {
+    display: flex;
+    justify-content: flex-start;
+    width:100%;
+}
+.search {
+    display: flex;
+    justify-content: flex-end;
+}
+.recipeCard{
+        border: 1px solid lightslategray;
+        border-radius: 8px; 
+        padding: 20px;
+        background-color: #fff;
+        margin: 20px;
+}
+.recipeImage{
+    padding-bottom: 5px;
+}
+h1, h2 {
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+  }
+  h2{
+    color:blue;
+  }
+p {
+    font-family: Arial, Helvetica,sans-serif;
+}
+.recipeTag{
+    display: inline;
+    border: 1px solid black;
+    margin-top: 5px;
+    padding: 3px;
+}
+.social {
+    display: flex;
+    justify-content: center;
+}
+.social img{
+    width: 40px;
+    padding-left: 10px;
+}
+.flaticon{
+    display: flex;
+    justify-content: center;
+}
+@media screen and (min-width: 600px) {
+    
+
+    .recipeCard {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        gap: 10px; /* Optional: adds space between elements */
+    }
+    
+    .recipeImage {
+        display: flex;
+        justify-content: flex-start; /* Image to the left */
+    }
+    
+    .recipeTag, 
+    .recipeName, 
+    .recipeDescription, 
+    .recipeRating {
+        display: flex;
+        justify-content: flex-end; /* These will align to the right */
+    }
+    
+
+
+/* .recipeCard{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.recipeImage{
+    display: flex;
+    justify-content: flex-start;
+}
+.recipeTag{
+    display: flex;
+    justify-content: flex-end;
+}
+.recipeName{
+    display: flex;
+    justify-content: flex-end;
+}
+.recipeDescription{
+    display: flex;
+    justify-content: flex-end;
+}
+.recipeRating{
+    display: flex;
+    justify-content: flex-end;
+} */
+
+footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin: 20px;
+}
+.social {
+    display: flex;
+    justify-content: flex-end;
+}
+.social img{
+    width: 40px;
+    padding-left: 10px;
+}
+
+}
