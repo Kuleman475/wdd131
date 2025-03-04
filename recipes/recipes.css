@@ -72,23 +72,49 @@ p {
     
 
     .recipeCard {
-        display: flex;
-        flex-direction: column; /* Stack items vertically */
-        gap: 10px; /* Optional: adds space between elements */
+        display: flex; /* Horizontal layout */
+        flex-direction: row; /* Image on left, text on right */
+        gap: 20px; /* Space between image and text */
+        padding: 20px;
+        border: 1px solid #ddd; /* Optional for visibility */
     }
     
     .recipeImage {
         display: flex;
-        justify-content: flex-start; /* Image to the left */
+        justify-content: flex-start; 
+        width: 350px;
     }
     
-    .recipeTag, 
-    .recipeName, 
-    .recipeDescription, 
-    .recipeRating {
-        display: flex;
-        justify-content: flex-end; /* These will align to the right */
+    .recipeImage img {
+        width: 100%; /* Make the image responsive */
+        height: auto;
+        border-radius: 8px; /* Optional styling */
     }
+    
+    .recipeDetails {
+        display: flex;
+        flex-direction: column; /* Stack text vertically */
+        justify-content: flex-start; /* Align text to the top */
+        flex: 1; /* Take up the remaining space */
+        gap: 10px; /* Space between text elements */
+    }
+    
+    .recipeName {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+    
+    .recipeDescription, .recipeRating {
+        font-size: 1em;
+    }
+    .recipeTag {
+        display: inline-block; /* Keeps the border tight around the text */
+        border: 1px solid black;
+        padding: 3px;
+        margin-top: 5px;
+        max-width: max-content; /* Prevent it from stretching */
+    }
+    
     
 
 
