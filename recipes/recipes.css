@@ -29,12 +29,19 @@ header {
     display: flex;
     justify-content: flex-end;
 }
-.recipeCard{
+/* .recipeCard{
         border: 1px solid lightslategray;
         border-radius: 8px; 
         padding: 20px;
         background-color: #fff;
         margin: 20px;
+} */
+.recipe {
+    border: 1px solid lightslategray;
+    border-radius: 8px; 
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px; 
 }
 .recipeImage{
     padding-bottom: 5px;
@@ -70,7 +77,7 @@ p {
 @media screen and (min-width: 600px) {
     
 
-    .recipeCard {
+    .recipe {
         display: flex; /* Horizontal layout */
         flex-direction: row; /* Image on left, text on right */
         gap: 20px; /* Space between image and text */

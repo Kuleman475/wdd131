@@ -11,7 +11,7 @@ function getRandomListEntry(list) {
 }
 
 // to test
-console.log(getRandomListEntry(recipes));
+console.log();
 
 
 function recipeTemplate(recipe) {
@@ -61,10 +61,8 @@ console.log(recipeTemplate(recipe));
 
 
 function init() {
-  // get a random recipe
-  const recipe = getRandomListEntry(recipes)
-  console.log([recipe] + "POPCODP")
-  // render the recipe with renderRecipes.
+  const recipe = getRandomListEntry(recipes);
+  console.log([recipe]);
   renderRecipes([recipe]);
 }
 init();
