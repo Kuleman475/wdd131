@@ -29,13 +29,6 @@ header {
     display: flex;
     justify-content: flex-end;
 }
-/* .recipeCard{
-        border: 1px solid lightslategray;
-        border-radius: 8px; 
-        padding: 20px;
-        background-color: #fff;
-        margin: 20px;
-} */
 .recipe {
     border: 1px solid lightslategray;
     border-radius: 8px; 
@@ -78,23 +71,23 @@ p {
     
 
     .recipe {
-        display: flex; /* Horizontal layout */
-        flex-direction: row; /* Image on left, text on right */
-        gap: 20px; /* Space between image and text */
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
         padding: 20px;
-        border: 1px solid #ddd; /* Optional for visibility */
+        border: 1px solid #ddd;
     }
     
     .recipeImage {
-        display: flex;
         justify-content: flex-start; 
-        max-width: 300px;
+        max-width: 50%;
+        margin-right: 20px;
     }
     
     .recipeImage img {
-        width: 100%; /* Make the image responsive */
+        width: 100%; 
         height: auto;
-        border-radius: 8px; /* Optional styling */
+        border-radius: 8px; 
     }
     
     .recipeDetails {
@@ -122,34 +115,6 @@ p {
     }
     
     
-
-
-/* .recipeCard{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-.recipeImage{
-    display: flex;
-    justify-content: flex-start;
-}
-.recipeTag{
-    display: flex;
-    justify-content: flex-end;
-}
-.recipeName{
-    display: flex;
-    justify-content: flex-end;
-}
-.recipeDescription{
-    display: flex;
-    justify-content: flex-end;
-}
-.recipeRating{
-    display: flex;
-    justify-content: flex-end;
-} */
-
 footer {
     display: flex;
     flex-direction: row-reverse;
