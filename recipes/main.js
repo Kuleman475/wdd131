@@ -30,9 +30,7 @@ function recipeTemplate(recipe) {
 	</figure>`;
   }
   
-
-
-function renderRecipes(recipes) {
+  function renderRecipes(recipes) {
 	const recipeList = document.querySelector('.recipeCard');
 	recipeList.innerHTML = '';
 

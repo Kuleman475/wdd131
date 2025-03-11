@@ -88,7 +88,7 @@ p {
     .recipeImage {
         display: flex;
         justify-content: flex-start; 
-        width: 350px;
+        max-width: 300px;
     }
     
     .recipeImage img {
