@@ -10,10 +10,6 @@ function getRandomListEntry(list) {
 	return list[randomNum];
 }
 
-// to test
-console.log();
-
-
 function recipeTemplate(recipe) {
 	return `<figure class="recipe">
 	  <img src="${recipe.image}" alt="image of ${recipe.name}" />
@@ -38,7 +34,8 @@ function recipeTemplate(recipe) {
 
 function renderRecipes(recipes) {
 	const recipeList = document.querySelector('.recipeCard');
-	console.log(recipeList)
+	recipeList.innerHTML = '';
+
 	recipes.forEach(recipe => {
 	  // Generate the HTML for each recipe
 	  const recipeHtml = recipeTemplate(recipe);
@@ -52,18 +49,32 @@ function renderRecipes(recipes) {
   }
   
   document.addEventListener('DOMContentLoaded', () => {
-	renderRecipes(recipes);
+	const recipe = getRandomListEntry(recipes);
+	renderRecipes([recipe]);
   });
 
 
-  const recipe = getRandomListEntry(recipes);
-console.log(recipeTemplate(recipe));
-
-
-function init() {
-  const recipe = getRandomListEntry(recipes);
-  console.log([recipe]);
-  renderRecipes([recipe]);
+function filterRecipes(query) {
+	const filtered = recipes.filter(recipe => {
+	const recipeTag = recipe.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase()));
+	const recipeDesc = recipe.description.toLowerCase().includes(query.toLowerCase());
+    const recipeIng = recipe.recipeIngredient.some(ingredient => ingredient.toLowerCase().includes(query.toLowerCase()));
+    const recipeName = recipe.name.toLowerCase().includes(query.toLowerCase());
+	return recipeName || recipeTag || recipeDesc || recipeIng;
+    });
+	// Sorted List by name
+	console.log(filtered);
+	const sorted = filtered.sort((a, b) => a.name.localeCompare(b.name));
+	return sorted;
 }
-init();
+
+
+
+const search = document.querySelector(".search")
+search.addEventListener("click", function searchHandler(e) {
+	e.preventDefault()
+	const searchInput = document.querySelector(".searchInput").value.toLowerCase();
+	const filterss = filterRecipes(searchInput);
+	renderRecipes(filterss);
+});
   
