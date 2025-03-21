@@ -10,7 +10,7 @@ Fonts are separated by a | */
   --primary-color: #ff8026;
   --secondary-color: #00a2e8;
   --accent1-color: #F038FF;
-  --accent2-color: #0000;
+  --accent2-color: #000000;
 
   /* change the values below to your chosen font(s) */
   --heading-font:  'Press Start 2P', cursive;
@@ -92,4 +92,37 @@ nav a:visited {
 nav a:hover {
   color: var(--nav-hover-link-color);
   background-color: var(--nav-hover-background-color);
+}
+
+.random {
+    text-align: center;
+    padding: 20px;
+}
+.spotlight {
+    padding: 20px;
+    text-align: center;
+    background-color: var(--accent1-color);
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.spotlight img {
+    max-width: 450px;
+}
+
+/* Page 2 */
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+section {
+    margin: 20px;
+    background-color: #F038FF;
+    width: 200px;
+    text-align: center;
+}
+section img {
+    width: 175px;
 }
