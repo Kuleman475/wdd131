@@ -143,5 +143,5 @@ function spotlightTemplate(pokemon) {
 }
 
 document.querySelector(".button").addEventListener("click", () => {
-    alert("WOW");
+    randomSpotlight();
 });
