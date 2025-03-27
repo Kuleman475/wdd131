@@ -45,17 +45,17 @@ function convertToJson(res) {
    return pokemon;
 }
 
- async function getSpeciesByPokedexNumber(id) {
-  const response = await fetch(baseURL + `pokemon-species/${id}`);
-  const pokemon = await convertToJson(response);
-   return pokemon;
-}
+//  async function getSpeciesByPokedexNumber(id) {
+//   const response = await fetch(baseURL + `pokemon-species/${id}`);
+//   const pokemon = await convertToJson(response);
+//    return pokemon;
+// }
 
- async function getRegionData(id) {
-  const response = await fetch(baseURL +`region/${id}`);
-  const region = await convertToJson(response);
-  return region;
-}
+//  async function getRegionData(id) {
+//   const response = await fetch(baseURL +`region/${id}`);
+//   const region = await convertToJson(response);
+//   return region;
+// }
 function capitalizeFirstLetter(letter) {
     return letter.charAt(0).toUpperCase() + letter.slice(1);
   }
@@ -106,9 +106,9 @@ const typeColors = {
 
    return `<section class="pokemon" style="background-color: ${backgroundColor}">
    <img id="pokemonImage" src="${getImage(pokemon)}" alt="${pokemon.name}">
-   <h3 id="pokemonName">Name: <br>${capitalizeFirstLetter(pokemon.name)}</h3>
-   <p id="pokemonNumber">Dex Number: ${pokemon.id}</p>
-   <p id="pokemonType">Type: <br>${capitalizeFirstLetter(pokemon.types[0].type.name)} ${types(pokemon)}</p> 
+   <h3 id="pokemonName"><strong>Name: </strong><br>${capitalizeFirstLetter(pokemon.name)}</h3>
+   <p id="pokemonNumber"><strong>Dex Number: </strong>${pokemon.id}</p>
+   <p id="pokemonType"><strong>Type: </strong><br>${capitalizeFirstLetter(pokemon.types[0].type.name)} ${types(pokemon)}</p> 
    </section>`;
 }
 function getImage(pokemon){
@@ -125,23 +125,23 @@ function renderPokemonTemplate(template, container) {
 }
 
 function spotlightTemplate(pokemon) {
-    const primaryType = pokemon.types[0].type.name; // Get the first type
-    const backgroundColor = typeColors[primaryType] || "#D3D3D3"; // Default to gray if no match
-
     console.log(pokemon)
    return `<div class="pokemonSpot">
     <img id="pokemonImage" src="${getImage(pokemon)}" alt="${pokemon.name}">
-    <h3 id="pokemonName">Name: ${capitalizeFirstLetter(pokemon.name)}</h3>
-    <p id="pokemonNumber">Dex Number: ${pokemon.id}</p>
-    <p id="pokemonType">Type: ${capitalizeFirstLetter(pokemon.types[0].type.name)} ${types(pokemon)}</p> 
-    <p id="pokemonDex">Abilities:${pokemon.abilities[0].ability.name} ${ablilities(pokemon)}</p>
-    <p>Base Stats:</p> 
-    <p id="hp">HP: ${pokemon.stats[0].base_stat}</p>
-    <p id="attack">Attack: ${pokemon.stats[1].base_stat}</p>
-    <p id="defence">Defence: ${pokemon.stats[2].base_stat}</p>
-    <p id="specialAttack">Special Attack: ${pokemon.stats[3].base_stat}</p>
-    <p id="specialDefence">Special Defence: ${pokemon.stats[4].base_stat}</p>
-    <p id="speed">Speed: ${pokemon.stats[5].base_stat}</p>   
+    <h3 id="pokemonName"><strong>Name:</strong> ${capitalizeFirstLetter(pokemon.name)}</h3>
+    <p id="pokemonNumber"><strong>Dex Number:</strong> ${pokemon.id}</p>
+    <p id="pokemonType"><strong>Type:</strong> ${capitalizeFirstLetter(pokemon.types[0].type.name)} ${types(pokemon)}</p> 
+    <p id="pokemonDex"><strong>Abilities:</strong> ${pokemon.abilities[0].ability.name} ${ablilities(pokemon)}</p>
+    <p><strong><u>Base Stats</u></strong></p> 
+    <p id="hp"><strong>HP:</strong> ${pokemon.stats[0].base_stat}</p>
+    <p id="attack"><strong>Attack:</strong> ${pokemon.stats[1].base_stat}</p>
+    <p id="defence"><strong>Defence:</strong> ${pokemon.stats[2].base_stat}</p>
+    <p id="specialAttack"><strong>Special Attack:</strong> ${pokemon.stats[3].base_stat}</p>
+    <p id="specialDefence"><strong>Special Defence:</strong> ${pokemon.stats[4].base_stat}</p>
+    <p id="speed"><strong>Speed:</strong> ${pokemon.stats[5].base_stat}</p>   
     </div>`;
 }
 
+document.querySelector(".button").addEventListener("click", () => {
+    alert("WOW");
+});

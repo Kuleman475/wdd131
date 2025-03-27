@@ -102,7 +102,18 @@ nav a:hover {
 }
 
 
-
+.button {
+  background-color: var(--secondary-color);
+  width: 350px;
+  height: 50px; /* Adjust as needed */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Proper vertical centering */
+  border: none;
+  cursor: pointer;
+  border-radius: 8px; /* Optional: Rounded corners */
+}
 
 .random {
     text-align: center;
@@ -144,13 +155,13 @@ nav a:hover {
   color: black;
 }
 
-.type-hide {
+/* .type-hide {
   display: none;
 }
 
 .type-item:hover .type-hide{
   display: contents;
-}
+} */
 .pokemonTypes{
   padding: 25px;
 }
