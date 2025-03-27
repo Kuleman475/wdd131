@@ -1,5 +1,17 @@
 const baseURL = "https://pokeapi.co/api/v2/";
+
+randomSpotlight();
 pokemon();
+
+
+async function randomSpotlight() {
+    const randomNum = Math.floor(Math.random() * 1025) + 1;
+    let mon = await getPokemonByPokedexNumber(randomNum);
+            let container = document.querySelector(".spotlight");
+        let template = spotlightTemplate(mon);
+       renderPokemonTemplate(template, container);
+        }
+
 
  async function pokemon(){
 
@@ -60,7 +72,7 @@ function types(type) {
 function ablilities(ability) {
     console.log(ability.abilities.length, "POP")
     if (ability.abilities.length >= 2){
-        return  "/ <br>" + ability.abilities[1].ability.name;
+        return  "/ " + ability.abilities[1].ability.name;
     }
     else {
         return "";
@@ -93,7 +105,7 @@ const typeColors = {
     const backgroundColor = typeColors[primaryType] || "#D3D3D3"; // Default to gray if no match
 
    return `<section class="pokemon" style="background-color: ${backgroundColor}">
-   <img id="pokemonImage" src="${getImage(pokemon)}">
+   <img id="pokemonImage" src="${getImage(pokemon)}" alt="${pokemon.name}">
    <h3 id="pokemonName">Name: <br>${capitalizeFirstLetter(pokemon.name)}</h3>
    <p id="pokemonNumber">Dex Number: ${pokemon.id}</p>
    <p id="pokemonType">Type: <br>${capitalizeFirstLetter(pokemon.types[0].type.name)} ${types(pokemon)}</p> 
@@ -113,14 +125,23 @@ function renderPokemonTemplate(template, container) {
 }
 
 function spotlightTemplate(pokemon) {
-
     const primaryType = pokemon.types[0].type.name; // Get the first type
     const backgroundColor = typeColors[primaryType] || "#D3D3D3"; // Default to gray if no match
 
-   return `<section class="pokemon" style="background-color: ${backgroundColor}">
-   <img id="pokemonImage" src="${getImage(pokemon)}">
-   <h3 id="pokemonName">Name: <br>${capitalizeFirstLetter(pokemon.name)}</h3>
-   <p id="pokemonNumber">Dex Number: ${pokemon.id}</p>
-   <p id="pokemonType">Type: <br>${capitalizeFirstLetter(pokemon.types[0].type.name)} ${types(pokemon)}</p> 
-   </section>`;
+    console.log(pokemon)
+   return `<div class="pokemonSpot">
+    <img id="pokemonImage" src="${getImage(pokemon)}" alt="${pokemon.name}">
+    <h3 id="pokemonName">Name: ${capitalizeFirstLetter(pokemon.name)}</h3>
+    <p id="pokemonNumber">Dex Number: ${pokemon.id}</p>
+    <p id="pokemonType">Type: ${capitalizeFirstLetter(pokemon.types[0].type.name)} ${types(pokemon)}</p> 
+    <p id="pokemonDex">Abilities:${pokemon.abilities[0].ability.name} ${ablilities(pokemon)}</p>
+    <p>Base Stats:</p> 
+    <p id="hp">HP: ${pokemon.stats[0].base_stat}</p>
+    <p id="attack">Attack: ${pokemon.stats[1].base_stat}</p>
+    <p id="defence">Defence: ${pokemon.stats[2].base_stat}</p>
+    <p id="specialAttack">Special Attack: ${pokemon.stats[3].base_stat}</p>
+    <p id="specialDefence">Special Defence: ${pokemon.stats[4].base_stat}</p>
+    <p id="speed">Speed: ${pokemon.stats[5].base_stat}</p>   
+    </div>`;
 }
+

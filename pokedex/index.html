@@ -8,146 +8,172 @@
     <link rel="stylesheet" href="pokedex.css"/>
     <script src="pokedex.js" defer></script>
     
-    <title>Pokedex</title>
+    <title>Pokédex</title>
 </head>
 <body>
     <header>
-        <h1>Pokedex</h1>
+        <h1>Pokédex</h1>
         <nav>
             <a href="index.html">Home</a>
-            <a href="page2.html">Page2</a>
+            <a href="page2.html">Pokédex List</a>
         </nav>
     </header>
-    <main>
+    <main class="home">
 
-        <h1>Pokémon Types and Their Descriptions 🌟</h1>
+        <div class="pokemonTypes">
+        <h2>Pokémon Types</h2>
   
         <ul class="type-list">
-          <li class="type-item" style="background-color: #A8A77A;">
-            <div class="type-color" style="background-color: #A8A77A; width: 30px; height: 30px;"></div>
+        <li class="type-item" style="background-color: #A8A77A;">
             <div class="type-name">Normal</div>
+            <div class="type-hide">
             <p>Description: Normal types are versatile with a broad range of moves. They're reliable but not especially effective against other types.</p>
             <p>Weak to: Fighting</p>
+            </div>
         </li>
       
           <li class="type-item" style="background-color: #EE8130;">
-            <div class="type-color" style="background-color: #EE8130; width: 30px; height: 30px;"></div>
             <div class="type-name">Fire</div>
+            <div class="type-hide">
             <p>Description: Fire types are aggressive, specializing in strong attacks that deal damage by setting things on fire! Famous examples include Charizard and Arcanine.</p>
             <p>Weak to: Water, Ground, Rock</p>
+            </div>
         </li>
       
           <li class="type-item" style="background-color: #6390F0;">
-            <div class="type-color" style="background-color: #6390F0; width: 30px; height: 30px;"></div>
             <div class="type-name">Water</div>
+            <div class="type-hide">
             <p>Description: Water types are adaptable and excel at handling fire with their fluid and cool moves. Examples include Squirtle and Gyarados.</p>
-            
-            
+            <p>Weak to: Electric, Grass</p>
+            </div>
         </li>
       
           <li class="type-item" style="background-color: #F7D02C;">
-            <div class="type-color" style="background-color: #F7D02C; width: 30px; height: 30px;"></div>
             <div class="type-name">Electric</div>
+            <div class="type-hide">
             <p>Description: Electric types are fast and powerful. Pikachu is the perfect example, using quick and shocking moves to stun opponents!</p>
-          </li>
+            <p>Weak to: Ground</p>
+            </div>
+        </li>
       
           <li class="type-item" style="background-color: #7AC74C;">
-            <div class="type-color" style="background-color: #7AC74C; width: 30px; height: 30px;"></div>
             <div class="type-name">Grass</div>
+            <div class="type-hide">
             <p>Description: Grass types are closely tied to nature, using growth-related abilities. They're typically weak against Fire but strong defensively. Bulbasaur and Venusaur lead the way.</p>
-          </li>
+            <p>Weak to: Fire, Ice, Poison, Flying, Bug</p>
+            </div>
+        </li>
       
           <li class="type-item" style="background-color: #96D9D6;">
-            <div class="type-color" style="background-color: #96D9D6; width: 30px; height: 30px;"></div>
             <div class="type-name">Ice</div>
+            <div class="type-hide">
             <p>Description: Ice types specialize in freezing opponents. They excel at freezing and slowing down foes, like Lapras and Glaceon.</p>
-          </li>
+            <p>Weak to: Fire, Fighting, Rock, Steel</p>
+            </div>
+        </li>
       
           <li class="type-item" style="background-color: #C22E28;">
-            <div class="type-color" style="background-color: #C22E28; width: 30px; height: 30px;"></div>
             <div class="type-name">Fighting</div>
+            <div class="type-hide">
             <p>Description: Fighting types are known for their physical strength, focusing on martial arts. They use punches and kicks, like Machop and Lucario.</p>
-          </li>
+            <p>Weak to: Flying, Psychic, Fairy</p>
+            </div>
+        </li>
       
           <li class="type-item" style="background-color: #A33EA1;">
-            <div class="type-color" style="background-color: #A33EA1; width: 30px; height: 30px;"></div>
             <div class="type-name">Poison</div>
+            <div class="type-hide">
             <p>Description: Poison types specialize in inflicting status effects. They use toxins and poisons to debilitate opponents, like Muk and Venusaur.</p>
-          </li>
+            <p>Weak to: Ground, Psychic</p>
+            </div>
+        </li>
       
           <li class="type-item" style="background-color: #E2BF65;">
-            <div class="type-color" style="background-color: #E2BF65; width: 30px; height: 30px;"></div>
             <div class="type-name">Ground</div>
+            <div class="type-hide">
             <p>Description: Ground types are strong and solid. They rely on powerful physical moves and are resistant to Electric attacks, with Pokémon like Golem and Swampert.</p>
-          </li>
+            <p>Weak to: Water, Ice, Grass</p>
+            </div>
+        </li>
       
           <li class="type-item" style="background-color: #A98FF3;">
-            <div class="type-color" style="background-color: #A98FF3; width: 30px; height: 30px;"></div>
             <div class="type-name">Flying</div>
+            <div class="type-hide">
             <p>Description: Flying types are quick and nimble. They can easily avoid Ground-type moves, and Pokémon like Pidgeot and Fearow represent this type.</p>
-          </li>
+            <p>Weak to: Electric, Ice, Rock</p>
+            </div>
+        </li>
       
           <li class="type-item" style="background-color: #F95587;">
-            <div class="type-color" style="background-color: #F95587; width: 30px; height: 30px;"></div>
             <div class="type-name">Psychic</div>
+            <div class="type-hide">
             <p>Description: Psychic types use mind-bending abilities to manipulate their enemies. Mewtwo and Alakazam are iconic Psychic types.</p>
-          </li>
+            <p>Weak to: Bug, Ghost, Dark</p>
+            </div>
+        </li>
       
           <li class="type-item" style="background-color: #A6B91A;">
-            <div class="type-color" style="background-color: #A6B91A; width: 30px; height: 30px;"></div>
             <div class="type-name">Bug</div>
+            <div class="type-hide">
             <p>Description: Bug types rely on quick and overwhelming attacks. They swarm and often cause status effects, as seen with Scyther and Beedrill.</p>
-          </li>
+            <p>Weak to: Fire, Flying, Rock</p>
+            </div>
+        </li>
       
           <li class="type-item" style="background-color: #B6A136;">
-            <div class="type-color" style="background-color: #B6A136; width: 30px; height: 30px;"></div>
             <div class="type-name">Rock</div>
+            <div class="type-hide">
             <p>Description: Rock types are defensive and can take a lot of damage. Pokémon like Onix and Tyranitar are known for their tough nature.</p>
-          </li>
+            <p>Weak to: Water, Grass, Fighting, Ground, Steel</p>
+            </div>
+        </li>
       
           <li class="type-item" style="background-color: #735797;">
-            <div class="type-color" style="background-color: #735797; width: 30px; height: 30px;"></div>
             <div class="type-name">Ghost</div>
+            <div class="type-hide">
             <p>Description: Ghost types are tricky and mysterious. They use illusions and avoid Normal-type attacks, like Gengar and Mimikyu.</p>
-          </li>
+            <p>Weak to: Ghost, Dark</p>
+            </div>
+        </li>
       
           <li class="type-item" style="background-color: #6F35FC;">
-            <div class="type-color" style="background-color: #6F35FC; width: 30px; height: 30px;"></div>
             <div class="type-name">Dragon</div>
+            <div class="type-hide">
             <p>Description: Dragons are powerful and majestic. They have high stats and strong moves, with Pokémon like Dragonite and Garchomp being prime examples.</p>
-          </li>
+            <p>Weak to: Ice, Dragon, Fairy</p>
+            </div>
+        </li>
       
           <li class="type-item" style="background-color: #705746;">
-            <div class="type-color" style="background-color: #705746; width: 30px; height: 30px;"></div>
             <div class="type-name">Dark</div>
+            <div class="type-hide">
             <p>Description: Dark types are sneaky and devious, specializing in trickery and surprise. Pokémon like Umbreon and Zoroark excel in this type.</p>
-          </li>
+            <p>Weak to: Fighting, Bug, Fairy</p>
+            </div>
+        </li>
       
           <li class="type-item" style="background-color: #B7B7CE;">
-            <div class="type-color" style="background-color: #B7B7CE; width: 30px; height: 30px;"></div>
             <div class="type-name">Steel</div>
+            <div class="type-hide">
             <p>Description: Steel types are durable and resilient, known for their resistance to many types of attacks. Steelix and Aegislash are key representatives.</p>
-            
+            <p>Weak to: Fire, Fighting, Ground</p>
+            </div>
           </li>
       
           <li class="type-item" style="background-color: #D685AD;">
-            <div class="type-color" style="background-color: #D685AD; width: 30px; height: 30px;"></div>
             <div class="type-name">Fairy</div>
+            <div class="type-hide">
             <p>Description: Fairy types are magical and charming, specializing in status effects. Pokémon like Togekiss and Sylveon represent this mystical type.</p>
-          </li>
+            <p>Weak to: Steel, Poison</p>
+            </div>
+        </li>
         </ul>
       
-
-
-        <h2 class="random">
-           ✨ Random Pokemon Spotlight ✨
-        </h2>
-        <div class="spotlight">
-            <img src="home-wireframe.png" alt="image">
-            <h3 class="name">Pokemon Name</h3>
-            <p class="types">Type 1, Type 2</p>
-            <p class="entry">Dex Entry: this pokemon has a great way of being awesome.</p> 
-        </div>
+</div>
+        <div class="pokemonSpotlight">
+        <h2 class="random">Pokémon Spotlight</h2>
+        <div class="spotlight"></div>
+    </div>
     </main>
 </body>
 </html>

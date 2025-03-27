@@ -69,6 +69,12 @@ p {
   color: var(--paragraph-color);
 }
 
+.home {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
 nav {
   background-color: var(--nav-background-color);
   line-height: 3em;
@@ -95,38 +101,60 @@ nav a:hover {
   background-color: var(--nav-hover-background-color);
 }
 
+
+
+
 .random {
     text-align: center;
     padding: 20px;
 }
 .spotlight {
-    padding: 20px;
+    padding: 10px;
     text-align: center;
-    background-color: var(--accent1-color);
-    margin-left: 20%;
-    margin-right: 20%;
+    padding-bottom: 20px;
 }
 .spotlight img {
-    width: 150px;
+    margin-top: 20px;
+    width: 350px;
+}
+.pokemonSpot {
+  padding: 15px;
+  border-radius: 5100px;
+  background-color: #ff8026;
 }
 
 .type-list {
   list-style-type: none;
-  padding: 0;
+  padding: 10px;
+  color: black;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
 }
 .type-item {
-  display: flex;
   align-items: center;
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 8px;
-  color: #fff;
-  font-size: 16px;
 }
 .type-name {
-  margin-left: 10px;
   font-weight: bold;
+  font-size: 20px;
+  color: black;
 }
+
+.type-hide {
+  display: none;
+}
+
+.type-item:hover .type-hide{
+  display: contents;
+}
+.pokemonTypes{
+  padding: 25px;
+}
+
 
 /* Page 2 */
 
@@ -142,7 +170,7 @@ section {
     width: 200px;
     text-align: center;
     padding-bottom: 15px;
-    border: 3px solid black;
+    border: 3px solid var(--accent1-color);
     border-radius: 10px;
   }
 section img {
