@@ -11,7 +11,7 @@ async function randomSpotlight() {
         let template = spotlightTemplate(mon);
        renderPokemonTemplate(template, container);
         }
-
+        
 
  async function pokemon(){
 
@@ -28,8 +28,9 @@ Promise.all(pokemonArray).then( results => {
  renderPokemonTemplate(template, container);
   })
 })
-
  }
+
+
 
 function convertToJson(res) {
     if (res.ok) {
@@ -45,17 +46,7 @@ function convertToJson(res) {
    return pokemon;
 }
 
-//  async function getSpeciesByPokedexNumber(id) {
-//   const response = await fetch(baseURL + `pokemon-species/${id}`);
-//   const pokemon = await convertToJson(response);
-//    return pokemon;
-// }
 
-//  async function getRegionData(id) {
-//   const response = await fetch(baseURL +`region/${id}`);
-//   const region = await convertToJson(response);
-//   return region;
-// }
 function capitalizeFirstLetter(letter) {
     return letter.charAt(0).toUpperCase() + letter.slice(1);
   }
@@ -85,16 +76,16 @@ const typeColors = {
     electric: "#F7D02C",
     grass: "#7AC74C",
     ice: "#96D9D6",
-    fighting: "#C22E28",
-    poison: "#A33EA1",
+    fighting: "#f6433d",
+    poison: "#cd4ecb",
     ground: "#E2BF65",
     flying: "#A98FF3",
     psychic: "#F95587",
     bug: "#A6B91A",
     rock: "#B6A136",
-    ghost: "#735797",
-    dragon: "#6F35FC",
-    dark: "#705746",
+    ghost: "#8769ae",
+    dragon: "#8252fb",
+    dark: "#a07d65",
     steel: "#B7B7CE",
     fairy: "#D685AD",
   };
@@ -105,8 +96,8 @@ const typeColors = {
     const backgroundColor = typeColors[primaryType] || "#D3D3D3"; // Default to gray if no match
 
    return `<section class="pokemon" style="background-color: ${backgroundColor}">
-   <img id="pokemonImage" src="${getImage(pokemon)}" alt="${pokemon.name}">
-   <h3 id="pokemonName"><strong>Name: </strong><br>${capitalizeFirstLetter(pokemon.name)}</h3>
+   <img id="pokemonImage" src="${getImage(pokemon)}" alt="${pokemon.name}" loading="lazy">
+   <h2 id="pokemonName"><strong>Name: </strong><br>${capitalizeFirstLetter(pokemon.name)}</h2>
    <p id="pokemonNumber"><strong>Dex Number: </strong>${pokemon.id}</p>
    <p id="pokemonType"><strong>Type: </strong><br>${capitalizeFirstLetter(pokemon.types[0].type.name)} ${types(pokemon)}</p> 
    </section>`;
@@ -127,7 +118,7 @@ function renderPokemonTemplate(template, container) {
 function spotlightTemplate(pokemon) {
     console.log(pokemon)
    return `<div class="pokemonSpot">
-    <img id="pokemonImage" src="${getImage(pokemon)}" alt="${pokemon.name}">
+    <img id="pokemonImage" src="${getImage(pokemon)}" alt="${pokemon.name}" loading="lazy">
     <h3 id="pokemonName"><strong>Name:</strong> ${capitalizeFirstLetter(pokemon.name)}</h3>
     <p id="pokemonNumber"><strong>Dex Number:</strong> ${pokemon.id}</p>
     <p id="pokemonType"><strong>Type:</strong> ${capitalizeFirstLetter(pokemon.types[0].type.name)} ${types(pokemon)}</p> 
