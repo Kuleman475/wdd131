@@ -40,11 +40,13 @@ h3,
 h4,
 h5,
 h6,
-a {
+a,
+.region {
   font-family: var(--heading-font);
   color: var(--headline-color-on-white);
 }
-h2 {
+h2, 
+.region {
   text-align: center;
 }
 hr {
@@ -64,16 +66,14 @@ header > h2 {
   color: var(--headline-color-on-color);
 }
 
-p {
+p,
+select,
+option,
+label{
   font-family: var(--paragraph-font);
   color: var(--paragraph-color);
 }
 
-.home {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
-}
 
 nav {
   background-color: var(--nav-background-color);
@@ -104,7 +104,7 @@ nav a:hover {
 
 .button {
   background-color: var(--secondary-color);
-  width: 350px;
+  width: 450px;
   height: 50px; /* Adjust as needed */
   text-align: center;
   display: flex;
@@ -113,6 +113,7 @@ nav a:hover {
   border: none;
   cursor: pointer;
   border-radius: 8px; /* Optional: Rounded corners */
+  margin: 0 auto;
 }
 
 .random {
@@ -126,7 +127,7 @@ nav a:hover {
 }
 .spotlight img {
     margin-top: 20px;
-    width: 350px;
+    max-width: 350px;
 }
 .pokemonSpot {
   padding: 15px;
@@ -140,7 +141,7 @@ nav a:hover {
   color: black;
   text-align: center;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
 }
 .type-item {
@@ -155,13 +156,7 @@ nav a:hover {
   color: black;
 }
 
-/* .type-hide {
-  display: none;
-}
 
-.type-item:hover .type-hide{
-  display: contents;
-} */
 .pokemonTypes{
   padding: 25px;
 }
@@ -188,4 +183,42 @@ section img {
     margin-top: 10px;
     width: 150px;
     background-color: white;
+}
+.region-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 10px;
+  align-items: center;
+  width: 100%;
+}
+
+.chooseRegion {
+  margin-right: auto; 
+  background-color: var(--accent1-color);
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.region {
+  text-align: center;
+}
+
+@media screen and (min-width: 850px) {
+
+  .home {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+  
+  .type-list {
+    list-style-type: none;
+    padding: 10px;
+    color: black;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+  }
+
 }
